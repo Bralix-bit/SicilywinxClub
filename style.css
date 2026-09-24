@@ -1,0 +1,55 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #180c33 0%, #0d061f 50%, #05020d 100%);
+    color: #f1f5f9;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Floating Sparkling Stars */
+.star-sparkle {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    animation: floatStar 5s infinite ease-in-out;
+    pointer-events: none;
+    user-select: none;
+}
+
+@keyframes floatStar {
+    0%, 100% { transform: translateY(0px) rotate(0deg) scale(0.8); opacity: 0.3; }
+    50% { transform: translateY(-50px) rotate(180deg) scale(1.2); opacity: 1; text-shadow: 0 0 10px #ff77ff, 0 0 20px #00ffff; }
+}
+
+/* Clean Card Styling */
+.postcard {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: all 0.3s ease;
+}
+.postcard:hover {
+    transform: translateY(-6px);
+    border-color: rgba(236, 72, 153, 0.5);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.25);
+}
+
+/* Gradient text */
+.gradient-text {
+    background: linear-gradient(135deg, #f472b6 0%, #38bdf8 50%, #fde047 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0d061f;
+}
+::-webkit-scrollbar-thumb {
+    background: #8b5cf6;
+    border-radius: 4px;
+}
