@@ -116,13 +116,26 @@ header {
   padding: 5px;
 }
 
+/* Stato di default: hamburger normale */
 .hamburger span {
   display: block;
   width: 25px;
   height: 3px;
-  background-color: var(--text-dark);
-  border-radius: 2px;
-  transition: all 0.3s ease;
+  background: #fff;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Quando il menu è attivo (aggiungi .active al pulsante hamburger) */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0; /* Fa sparire la linea centrale */
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* --- HERO SECTION --- */
@@ -582,11 +595,11 @@ footer {
     top: 100%;
     left: 0;
     width: 100%;
-    background: #1e1826; /* Sfondo pieno per coprire i testi sotto */
-    flex-direction: column;
-    padding: 1.5rem 0;
+    background: #1e1826fb; /* Sfondo pieno per coprire i testi sotto */
+    flex-direction: column; /* <-- CORRETTO: uno sotto l'altro in verticale */
+    padding: 2rem 0;
     gap: 1rem;
-    border-bottom: 1px solid rgba(236, 72, 153, 0.3);
+    border-bottom: 1px solid rgba(236, 72, 154, 0.068);
     box-shadow: var(--shadow-lg);
     z-index: 1000;
   }
@@ -595,32 +608,22 @@ footer {
     display: flex;
   }
 
-  /* TUTTO ALLINEATO A DESTRA TRANNE LE FATE */
+  /* Allineamento voci */
   .nav-links li {
     text-align: right;
     width: 100%;
-    padding-right: 2rem;
+    padding-inline: 2rem;
   }
 
-  /* Eccezione: La pagina delle Fate resta allineata a sinistra */
-  .nav-links li:has(a[href*="fate"]) {
-    text-align: left;
-    padding-left: 2rem;
-    padding-right: 0;
-  }
-
-  /* Sistema anche il pulsante "Seguici Qui" nel menu mobile per farlo stare dentro bene */
-  .nav-links li:has(.btn-nav-social) {
-    text-align: right;
-    padding-right: 2rem;
-  }
 
   .nav-container { 
     flex-direction: row; 
     justify-content: space-between;
   }
 
-  .hero h1 { font-size: 2.25rem; }
+  .hero h1 { 
+    font-size: 2.25rem; 
+  }
   
   .profile-header { 
     grid-template-columns: 1fr; 
@@ -635,9 +638,4 @@ footer {
     justify-content: center; 
   }
 
-  .contact-form {
-    padding: 1.5rem;
-    width: 95%;
-    margin: 0 auto;
-  }
 }

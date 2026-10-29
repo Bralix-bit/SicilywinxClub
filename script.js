@@ -9,12 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (hamburger && navLinks) {
         hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active'); // <-- AGGIUNTO: attiva/disattiva la "X"
             navLinks.classList.toggle('active');
         });
 
-        // Chiude il menu automaticamente quando clicchi su un link (opzionale ma comodo)
+        // Chiude il menu automaticamente quando clicchi su un link
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
+                hamburger.classList.remove('active'); // <-- AGGIUNTO: riporta la "X" a hamburger
                 navLinks.classList.remove('active');
             });
         });
@@ -40,9 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (modal) {
         window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
+            e.target === modal && (modal.style.display = 'none');
         });
     }
 
