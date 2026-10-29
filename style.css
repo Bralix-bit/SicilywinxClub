@@ -571,9 +571,7 @@ footer {
   margin-top: auto;
 }
 
-/* --- RESPONSIVE MOBILE (@media max-width: 768px) --- */
 @media (max-width: 768px) {
-  /* Mostra il pulsante hamburger e gestisci il menu a tendina */
   .hamburger {
     display: flex;
   }
@@ -584,12 +582,13 @@ footer {
     top: 100%;
     left: 0;
     width: 100%;
-    background: rgba(30, 24, 38, 0.95);
-    backdrop-filter: blur(12px);
+    background: #1e1826; /* Sfondo pieno per coprire i testi sotto */
     flex-direction: column;
     padding: 1.5rem 0;
-    border-bottom: 1px solid rgba(236, 72, 153, 0.2);
-    box-shadow: var(--shadow-md);
+    gap: 1rem;
+    border-bottom: 1px solid rgba(236, 72, 153, 0.3);
+    box-shadow: var(--shadow-lg);
+    z-index: 1000;
   }
 
   .nav-links.active {
@@ -608,6 +607,12 @@ footer {
     text-align: left;
     padding-left: 2rem;
     padding-right: 0;
+  }
+
+  /* Sistema anche il pulsante "Seguici Qui" nel menu mobile per farlo stare dentro bene */
+  .nav-links li:has(.btn-nav-social) {
+    text-align: right;
+    padding-right: 2rem;
   }
 
   .nav-container { 
@@ -630,7 +635,6 @@ footer {
     justify-content: center; 
   }
 
-  /* Modulo di contatto più largo su mobile */
   .contact-form {
     padding: 1.5rem;
     width: 95%;
