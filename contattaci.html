@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contattaci - Sicily Winx Club</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">✨ Sicily Winx Club</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Il Progetto</a></li>
+                <li><a href="fate.html">Le Fate</a></li>
+                <li><a href="contattaci.html" class="active">Contattaci</a></li>
+                <li><a href="#" class="btn-nav-social open-social-modal">Seguici Qui</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Contact Section -->
+        <section id="contatti" class="py-10 px-6 relative z-10">
+            <div class="max-w-2xl mx-auto">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-extrabold contact-heading">Contattaci</h2>
+                    <p class="text-slate-300 text-sm mt-2">Compila il modulo per preventivi e fiere oppure inviaci direttamente un'email.</p>
+                </div>
+
+                <div class="postcard p-8 rounded-2xl border border-pink-500/30 shadow-xl space-y-6" style="background-color: var(--white);">
+                    <!-- Form per Formspree -->
+                    <form action="https://formspree.io/f/mvkgqaww" method="POST" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Il tuo Nome / Ente</label>
+                            <input type="text" name="name" required class="w-full bg-slate-900/90 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-pink-500 transition-colors" placeholder="es. Fiera del Fumetto o Nome">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">La tua Email</label>
+                            <input type="email" name="email" required class="w-full bg-slate-900/90 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-pink-500 transition-colors" placeholder="es. tuamail@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Messaggio / Dettagli Evento</label>
+                            <textarea name="message" rows="4" required class="w-full bg-slate-900/90 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-pink-500 transition-colors" placeholder="Scrivi qui per collaborazioni, preventivi o ospitate..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 rounded-full text-xs font-bold shadow-md shadow-pink-500/20 hover:opacity-95 transition-all cursor-pointer">
+                            <i class="fa-solid fa-paper-plane mr-1.5"></i> Invia Messaggio
+                        </button>
+                    </form>
+
+                    <div class="relative flex py-2 items-center">
+                        <div class="flex-grow border-t border-white/10"></div>
+                        <span class="flex-shrink mx-4 text-slate-400 text-xs uppercase tracking-wider">oppure</span>
+                        <div class="flex-grow border-t border-white/10"></div>
+                    </div>
+
+                    <!-- Pulsante Mailto Diretto -->
+                    <a href="mailto:sicilywinxclub@outlook.com?subject=Contatto%20dal%20sito%20Winx&body=Ciao%2C%20vi%20scrivo%20per..." class="block w-full bg-white/10 hover:bg-white/15 border border-white/15 text-white py-3 rounded-full text-xs font-bold transition-all text-center">
+                        <i class="fa-solid fa-envelope mr-1.5 text-pink-400"></i> Invia un'Email Diretta
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Social -->
+    <div id="socialModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2>Seguici sui Social! ✨</h2>
+            <p class="modal-text">Rimani aggiornato su tutti i nostri prossimi eventi e dietro le quinte.</p>
+            <div class="social-links-grid">
+                <a href="https://www.instagram.com/sicilywinxclub/" target="_blank" class="social-btn instagram">Instagram (@sicilywinxclub)</a>
+                <a href="https://www.tiktok.com/@sicily.winx.club" target="_blank" class="social-btn tiktok">TikTok (@sicily.winx.club)</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Sicily Winx Club. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,26 +1,48 @@
+// ==========================================================================
+// WINX CLUB COSPLAY PROJECT - JAVASCRIPT
+// ==========================================================================
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Generatore di stelline di sfondo
-    const container = document.getElementById('stars-container');
-    const totalStars = 25;
-    const starSymbols = ['★', '✧', '✦', '⋆'];
+    // --- MODAL SOCIAL CONTROL ---
+    const modal = document.getElementById('socialModal');
+    const openBtns = document.querySelectorAll('.open-social-modal');
+    const closeBtn = document.querySelector('.close-modal');
 
-    if (container) {
-        for (let i = 0; i < totalStars; i++) {
-            const star = document.createElement('div');
-            star.classList.add('star-sparkle');
-            star.textContent = starSymbols[Math.floor(Math.random() * starSymbols.length)];
-            
-            star.style.left = `${Math.random() * 100}%`;
-            star.style.top = `${Math.random() * 100}%`;
-            star.style.animationDuration = `${4 + Math.random() * 4}s`;
-            star.style.animationDelay = `${Math.random() * 5}s`;
-            star.style.fontSize = `${10 + Math.random() * 12}px`;
-            
-            const colors = ['#f472b6', '#38bdf8', '#fde047', '#34d399', '#c084fc', '#ffffff'];
-            star.style.color = colors[Math.floor(Math.random() * colors.length)];
+    openBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (modal) modal.style.display = 'flex';
+        });
+    });
 
-            container.appendChild(star);
-        }
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
     }
-    console.log("✨ Winx Starry Project ready! ✨");
+
+    if (modal) {
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
+
+    // --- FORM SUBMISSION HANDLER ---
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const keyInput = document.getElementById('secretKey').value;
+            
+            if (!keyInput) {
+                alert("Per favore, inserisci la chiave d'accesso per inviare il messaggio.");
+                return;
+            }
+
+            alert("Messaggio inviato con successo! Grazie per averci contattato.");
+            contactForm.reset();
+        });
+    }
 });

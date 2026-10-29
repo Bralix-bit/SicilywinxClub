@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Fate - Sicily Winx Club</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">✨ Sicily Winx Club</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Il Progetto</a></li>
+                <li><a href="fate.html" class="active">Le Fate</a></li>
+                <li><a href="contattaci.html">Contattaci</a></li>
+                <li><a href="#" class="btn-nav-social open-social-modal">Seguici Qui</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="section-title">
+            <h2>Le Nostre Fate</h2>
+            <p>Incontra le sei protagoniste del nostro gruppo cosplay</p>
+        </div>
+
+        <div class="grid-fate">
+            <!-- Flora (Alice) -->
+            <a href="flora.html" class="fairy-card flora" style="text-decoration: none; color: inherit;">
+                <div class="fairy-img" style="background-image: url('Nostre foto/FloraMagic.jpg'); background-position: center 20%;">
+                    <span class="fairy-badge">Fata della Natura</span>
+                </div>
+                <div class="fairy-info">
+                    <h3>Flora</h3>
+                    <div class="fairy-role">Alice • Bralix.cos</div>
+                    <p>Fondatrice e leader della troupe. Si occupa dell'organizzazione, creazione coreografica e coordinamento delle performance.</p>
+                    <div class="btn-secondary" style="text-align: center;">Vedi Scheda</div>
+                </div>
+            </a>
+
+            <!-- Stella (Zaira) -->
+            <a href="stella.html" class="fairy-card stella" style="text-decoration: none; color: inherit;">
+                <div class="fairy-img" style="background-image: url('Nostre foto/StellaMagic.JPG'); background-position: center 25%;">
+                    <span class="fairy-badge">Fata del Sole e della Luna</span>
+                </div>
+                <div class="fairy-info">
+                    <h3>Stella</h3>
+                    <div class="fairy-role">Zaira • __Juliet__</div>
+                    <p>Co-fondatrice del gruppo, performer vulcanica e responsabile della presenza scenica.</p>
+                    <div class="btn-secondary" style="text-align: center;">Vedi Scheda</div>
+                </div>
+            </a>
+
+            <!-- Bloom (Arianna) -->
+            <a href="bloom.html" class="fairy-card bloom" style="text-decoration: none; color: inherit;">
+                <div class="fairy-img" style="background-image: url('Nostre foto/BloomMagic.jpg'); background-position: center top;">
+                    <span class="fairy-badge">Fata della Fiamma del Drago</span>
+                </div>
+                <div class="fairy-info">
+                    <h3>Bloom</h3>
+                    <div class="fairy-role">Arianna • Iphomea</div>
+                    <p>Incaricata del make-up, degli accessori glitterati e della cura dei dettagli visivi.</p>
+                    <div class="btn-secondary" style="text-align: center;">Vedi Scheda</div>
+                </div>
+            </a>
+
+            <!-- Tecna (Rossana) -->
+            <a href="tecna.html" class="fairy-card tecna" style="text-decoration: none; color: inherit;">
+                <div class="fairy-img" style="background-image: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=600&q=80'); background-position: center 20%;">
+                    <span class="fairy-badge">Fata della Tecnologia</span>
+                </div>
+                <div class="fairy-info">
+                    <h3>Tecna</h3>
+                    <div class="fairy-role">Rossana • Rogueross</div>
+                    <p>Esperta di componenti stampate in 3D, luci LED e gestione dei canali social.</p>
+                    <div class="btn-secondary" style="text-align: center;">Vedi Scheda</div>
+                </div>
+            </a>
+
+            <!-- Musa (Sara) -->
+            <a href="musa.html" class="fairy-card musa" style="text-decoration: none; color: inherit;">
+                <div class="fairy-img" style="background-image: url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=600&q=80'); background-position: center 20%;">
+                    <span class="fairy-badge">Fata della Musica</span>
+                </div>
+                <div class="fairy-info">
+                    <h3>Musa</h3>
+                    <div class="fairy-role">Sara • lastormy_</div>
+                    <p>Curatrice delle tracce audio, dei remix e del montaggio sonoro delle esibizioni.</p>
+                    <div class="btn-secondary" style="text-align: center;">Vedi Scheda</div>
+                </div>
+            </a>
+
+            <!-- Aisha (Gioia) -->
+            <a href="aisha.html" class="fairy-card aisha" style="text-decoration: none; color: inherit;">
+                <div class="fairy-img" style="background-image: url('Nostre foto/AishaMagic.jpg'); background-position: center 20%;">
+                    <span class="fairy-badge">Fata dei Fluidi</span>
+                </div>
+                <div class="fairy-info">
+                    <h3>Aisha</h3>
+                    <div class="fairy-role">Gioia • Reya.cosplay</div>
+                    <p>Choreographer del gruppo, cura i passi di danza e il posizionamento dinamico sul palco.</p>
+                    <div class="btn-secondary" style="text-align: center;">Vedi Scheda</div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <!-- Modal Social -->
+    <div id="socialModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2>Seguici sui Social! ✨</h2>
+            <p style="color: var(--text-muted); margin-top: 0.5rem;">Rimani aggiornato su tutti i nostri prossimi eventi e dietro le quinte.</p>
+            <div class="social-links-grid">
+                <a href="https://www.instagram.com/sicilywinxclub/" target="_blank" rel="noopener noreferrer" class="social-btn instagram">Instagram (@sicilywinxclub)</a>
+                <a href="https://www.tiktok.com/@sicily.winx.club" target="_blank" rel="noopener noreferrer" class="social-btn tiktok">TikTok (@sicily.winx.club)</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Winx Club Cosplay Project. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
