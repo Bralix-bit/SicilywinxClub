@@ -3,6 +3,23 @@
 // ==========================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
+    // --- HAMBURGER MENU MOBILE ---
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Chiude il menu automaticamente quando clicchi su un link (opzionale ma comodo)
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    }
+
     // --- MODAL SOCIAL CONTROL ---
     const modal = document.getElementById('socialModal');
     const openBtns = document.querySelectorAll('.open-social-modal');
@@ -34,9 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const keyInput = document.getElementById('secretKey').value;
+            const keyInput = document.getElementById('secretKey');
             
-            if (!keyInput) {
+            if (keyInput && !keyInput.value) {
                 alert("Per favore, inserisci la chiave d'accesso per inviare il messaggio.");
                 return;
             }
